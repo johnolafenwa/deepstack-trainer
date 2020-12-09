@@ -19,6 +19,6 @@ git clone https://github.com/johnolafenwa/deepstack-trainer
 
 ## Install Requirements
 - Install Python3.7 or higher
-- Install (PyTorch)[https://pytorch.org]
+- Install [PyTorch](https://pytorch.org)
 - Run <pre> pip install -r requirements.txt </pre>
 
