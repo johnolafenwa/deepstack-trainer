@@ -468,9 +468,17 @@ if __name__ == '__main__':
     if os.path.exists(val_path) == False:
         val_path = train_path
 
-    classnames = opt.classes 
-    classnames = opt.classes.split(",")
-
+    if opt.classes == "":
+        classes_file = os.path.join(train_path)
+        
+        with open(classes_file,"r") as f:
+            classes = f.read()
+        
+        classnames = classes.split("\n")
+    else:
+        classnames = classes.split(",")
+        classnames = opt.classes 
+    
     data_dict = {"train":train_path, "val":val_path,"nc":len(classnames),"names":classnames}
 
     opt.data = data_dict
