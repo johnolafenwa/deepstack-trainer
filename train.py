@@ -469,7 +469,7 @@ if __name__ == '__main__':
         val_path = train_path
 
     if opt.classes == "":
-        classes_file = os.path.join(train_path)
+        classes_file = os.path.join(train_path,"classes.txt") 
         
         with open(classes_file,"r") as f:
             classes = f.read()
