@@ -469,15 +469,9 @@ if __name__ == '__main__':
         val_path = train_path
 
     classnames = opt.classes 
-    classenames = opt.classes.split(",")
+    classnames = opt.classes.split(",")
 
-    if isinstance(classenames,list):
-        nc = len(classenames)
-    else:
-        nc = 1
-        classenames = [opt.classes,]
-
-    data_dict = {"train":train_path, "val":val_path,"nc":nc,"names":classnames}
+    data_dict = {"train":train_path, "val":val_path,"nc":len(classenames),"names":classnames}
 
     opt.data = data_dict
 
