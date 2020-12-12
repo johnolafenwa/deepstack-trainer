@@ -471,7 +471,7 @@ if __name__ == '__main__':
     classnames = opt.classes 
     classnames = opt.classes.split(",")
 
-    data_dict = {"train":train_path, "val":val_path,"nc":len(classenames),"names":classnames}
+    data_dict = {"train":train_path, "val":val_path,"nc":len(classnames),"names":classnames}
 
     opt.data = data_dict
 
