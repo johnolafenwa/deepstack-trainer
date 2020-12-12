@@ -405,18 +405,6 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
                                        if (save_dir / f).exists()]})
         logger.info('%g epochs completed in %.3f hours.\n' % (epoch - start_epoch + 1, (time.time() - t0) / 3600))
 
-        # Test best.pt
-        if opt.data.endswith('coco.yaml') and nc == 80:  # if COCO
-            results, _, _ = test.test(opt.data,
-                                      batch_size=total_batch_size,
-                                      imgsz=imgsz_test,
-                                      model=attempt_load(best if best.exists() else last, device).half(),
-                                      single_cls=opt.single_cls,
-                                      dataloader=testloader,
-                                      save_dir=save_dir,
-                                      save_json=True,  # use pycocotools
-                                      plots=False)
-
     else:
         dist.destroy_process_group()
 
