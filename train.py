@@ -460,7 +460,7 @@ if __name__ == '__main__':
     opt.weights = opt.model + ".pt"
 
     train_path = os.path.join(opt.dataset_path,"train")
-    val_path = os.path.join(opt.dataset_path,"val")
+    val_path = os.path.join(opt.dataset_path,"test")
 
     if os.path.exists(train_path) == False:
         train_path = opt.dataset_path
