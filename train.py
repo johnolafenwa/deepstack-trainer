@@ -428,7 +428,7 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', type=str, default='yolov5m', help='yolo model to use')
-    parser.add_argument('--classes', type=str, required=True, help='model.yaml path')
+    parser.add_argument('--classes', type=str,default='', required=True, help='model.yaml path')
     parser.add_argument('--dataset-path', type=str, required=True, help='path to dataset folder')
     parser.add_argument('--hyp', type=str, default='data/hyp.scratch.yaml', help='hyperparameters path')
     parser.add_argument('--epochs', type=int, default=300)
