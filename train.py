@@ -449,7 +449,7 @@ if __name__ == '__main__':
 
     if opt.project == "":
         project_name = os.path.basename(opt.dataset_path)
-        opt.project = "train/"+project_name
+        opt.project = "train-runs/"+project_name
 
     train_path = os.path.join(opt.dataset_path,"train")
     val_path = os.path.join(opt.dataset_path,"test")
